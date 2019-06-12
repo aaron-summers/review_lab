@@ -1,0 +1,14 @@
+<br>
+<% if @brand.cars.exists? %>
+  <h2>List of cars for - <%= @brand.name %></h2>
+  <% @brand.cars.each do |car| %>
+    <ul>
+      <li><%= link_to car.name, car_path %></li>
+    </ul>
+    <%end%>
+  <% else %>
+    <h1><%= @brand.name %></h1>
+<% end %>
+
+<hr>
+<%= button_to "Go Back", brands_path, :method => :get %>

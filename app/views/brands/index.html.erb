@@ -1,0 +1,12 @@
+<h1>All Brands</h1>
+
+<% @brands.each do |brand| %>
+  <ul>
+    <li><%= link_to brand.name, brand %></li>
+  </ul>
+<% end %>
+
+<br>
+<hr>
+
+<%= button_to("Add Brand", new_brand_path, :method => :get, :form_class => "brand-btn-class") %>

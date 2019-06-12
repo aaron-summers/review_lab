@@ -12,6 +12,7 @@ class CarsController < ApplicationController
     @car = Car.new
     @mechanics = Mechanic.all
     @owners = Owner.all
+    @brands = Brand.all
   end
 
   def create
@@ -22,7 +23,7 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:name, :brand, :owner_id, :mechanic_id)
+    params.require(:car).permit(:name, :owner_id, :mechanic_id, :brand_id)
   end
 
 end

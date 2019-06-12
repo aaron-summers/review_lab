@@ -1,5 +1,5 @@
 <h2>Car: <%= @car.name %></h2>
-<h3>Car Brand: <%= @car.brand %></h3>
+<h3>Car Brand: <%= link_to @car.brand.name, brand_path %></h3>
 <h4>Owner: <%= link_to @car.owner.name, owner_path %></h4>
 <h4>Mechanic: <%= link_to @car.mechanic.name, mechanic_path %></h4>
 
