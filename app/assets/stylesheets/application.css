@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ /* .btn-container {
+   display: table-row;
+ } */
+
+ .btn_container {
+   float: left;
+   padding: 5px;
+ }
