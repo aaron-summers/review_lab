@@ -1,0 +1,12 @@
+<h1>All Owners</h1>
+
+<% @owners.each do |owner| %>
+  <ul>
+    <li><%= link_to owner.name, owner %></li>
+  </ul>
+<% end %>
+
+<br>
+<hr>
+
+<%= button_to "Add Owner", new_owner_path, :method => :get %>

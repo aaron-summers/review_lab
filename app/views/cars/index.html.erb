@@ -1,0 +1,12 @@
+<h1>All Cars</h1>
+
+<% @cars.each do |car| %>
+  <ul>
+    <li><%= link_to car.name, car %></li>
+  </ul>
+<% end %>
+
+<br>
+<hr>
+
+<%= button_to "Add Car", new_car_path, :method => :get %>

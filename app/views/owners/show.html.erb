@@ -1,0 +1,20 @@
+<h2><%= @owner.name %></h2>
+
+<h5>Cars for <%= @owner.name %>:</h5>
+<% @owner.cars.each do |car| %>
+  <ul>
+    <li><%= link_to car.name, car_path %></li>
+  </ul>
+<% end %>
+
+<h5><%= @owner.name %> is currently seeing:</h5>
+<% @owner.mechanics.each do |mechanic| %>
+  <ul>
+    <li><%= link_to mechanic.name, mechanic_path %></li>
+  </ul>
+<% end %>
+
+<br>
+<hr>
+
+<%= button_to "Go Back", cars_path, :method => :get %>

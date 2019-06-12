@@ -1,0 +1,12 @@
+<h1>All Mechanics</h1>
+
+<% @mechanics.each do |mechanic| %>
+  <ul>
+    <li><%= link_to mechanic.name, mechanic %></li>
+  </ul>
+<% end %>
+
+<br>
+<hr>
+
+<%= button_to "Add Mechanic", new_mechanic_path, :method => :get %>

@@ -1,0 +1,21 @@
+<h2><%= @mechanic.name %></h2>
+
+<h5>Cars for: <%= @mechanic.name %></h5>
+<% @mechanic.cars.each do |car| %>
+  <ul>
+    <li><%= link_to car.name, car_path %></li>
+  </ul>
+<% end %>
+
+<h5><%= @mechanic.name %> is currently seeing:</h5>
+<% @mechanic.owners.each do |owner| %>
+  <ul>
+    <li><%= link_to owner.name, owner_path %></li>
+  </ul>
+<% end %>
+
+
+<br>
+<hr>
+
+<%= button_to "Go Back", mechanics_path, :method => :get %>

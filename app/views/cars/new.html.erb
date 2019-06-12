@@ -1,0 +1,31 @@
+<%= form_for @car do |f| %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= f.label :owner_id %>
+    <%= f.collection_select :owner_id, @owners, :id, :name, selected: params[:owner_id] %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= f.label :mechanic_id %>
+    <%= f.collection_select :mechanic_id, @mechanics, :id, :name, selected: params[:mechanic_id] %>
+  </div>
+
+  <hr>
+
+  <%= f.submit %>
+
+<% end %>
+
+<br>
+<%= button_to "Go Back", cars_path, :method => :get %>
